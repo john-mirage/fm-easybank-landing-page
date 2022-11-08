@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import IconButton from "@components/IconButton";
 import { Logo as BaseLogo } from "@components/Icon";
-import { Container as BaseContainer } from "@styles/styled-components.mixins";
+import { containerMixin } from "@styles/styled-components.mixins";
 import { IconHamburger } from "@components/Icon";
 
 export const Header = styled.header`
@@ -15,7 +15,7 @@ export const Header = styled.header`
 `;
 
 export const Container = styled.div`
-  ${BaseContainer}
+  ${containerMixin}
   display: flex;
   flex-direction: row;
   justify-content: space-between;

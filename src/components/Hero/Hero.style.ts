@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container as ContainerMixin } from "@styles/styled-components.mixins";
+import { bodyMixin, containerMixin } from "@styles/styled-components.mixins";
 
 export const Hero = styled.div``;
 
@@ -8,9 +8,9 @@ export const Image = styled.div`
 `;
 
 export const Container = styled.div`
+  ${containerMixin}
   text-align: center;
   padding-bottom: ${({ theme }) => theme.pxToRem(88)};
-  ${ContainerMixin}
 `;
 
 export const Title = styled.h2`
@@ -23,10 +23,6 @@ export const Title = styled.h2`
 `;
 
 export const Subtitle = styled.p`
+  ${bodyMixin}
   margin-bottom: ${({ theme }) => theme.pxToRem(32)};
-  font-size: ${({ theme }) => theme.pxToRem(15)};
-  font-weight: 400;
-  line-height: ${({ theme }) => theme.pxToRem(25)};
-  letter-spacing: ${({ theme }) => theme.pxToRem(-0.23)};
-  color: ${({ theme }) => theme.color.grayishBlue};
 `;

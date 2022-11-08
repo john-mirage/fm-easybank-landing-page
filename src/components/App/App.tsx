@@ -1,3 +1,4 @@
+import FeatureList from "@components/FeatureList";
 import Header from "@components/Header";
 import Hero from "@components/Hero";
 import GlobalStyle from "@styles/styled-components.global";
@@ -13,6 +14,7 @@ const App = () => {
         <Styled.Container>
           <Header />
           <Hero />
+          <FeatureList />
         </Styled.Container>
       </ThemeProvider>
     </>
