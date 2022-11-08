@@ -1,4 +1,5 @@
 import Header from "@components/Header";
+import Hero from "@components/Hero";
 import GlobalStyle from "@styles/styled-components.global";
 import theme from "@styles/styled-components.theme";
 import { ThemeProvider } from "styled-components";
@@ -11,6 +12,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Styled.Container>
           <Header />
+          <Hero />
         </Styled.Container>
       </ThemeProvider>
     </>
