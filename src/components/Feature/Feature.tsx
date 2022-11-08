@@ -8,11 +8,9 @@ interface Props {
 const Feature = ({ className, feature }: Props) => {
   return (
     <Styled.Feature className={className}>
-      <Styled.Article>
-        {feature.Icon}
-        <Styled.Name>{feature.name}</Styled.Name>
-        <Styled.Description>{feature.description}</Styled.Description>
-      </Styled.Article>
+      {feature.Icon}
+      <Styled.Name>{feature.name}</Styled.Name>
+      <Styled.Description>{feature.description}</Styled.Description>
     </Styled.Feature>
   );
 };

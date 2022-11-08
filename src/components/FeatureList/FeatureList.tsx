@@ -1,4 +1,5 @@
 import * as Styled from "./FeatureList.style";
+import Feature from "@components/Feature";
 
 const features: AppData.Feature[] = [
   {
@@ -38,7 +39,9 @@ const FeatureList = () => {
         </Styled.Subtitle>
         <Styled.List>
           {features.map((feature) => (
-            <Styled.Feature key={feature.name} feature={feature} />
+            <Styled.ListItem key={feature.name}>
+              <Feature feature={feature} />
+            </Styled.ListItem>
           ))}
         </Styled.List>
       </Styled.Container>

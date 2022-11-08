@@ -36,7 +36,7 @@ export const containerMixin = css`
   }
 `;
 
-export const titleMixin = css`
+export const headingMixin = css`
   font-size: ${({ theme }) => theme.pxToRem(32)};
   font-weight: 300;
   line-height: ${({ theme }) => theme.pxToRem(38)};

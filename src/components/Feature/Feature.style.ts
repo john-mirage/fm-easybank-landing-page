@@ -1,9 +1,7 @@
 import { bodyMixin } from "@styles/styled-components.mixins";
 import styled from "styled-components";
 
-export const Feature = styled.li``;
-
-export const Article = styled.article`
+export const Feature = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;

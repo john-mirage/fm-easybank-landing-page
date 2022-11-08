@@ -1,7 +1,7 @@
 import Button from "@components/Button";
 import * as Styled from "./Hero.style";
 
-const App = () => {
+const Hero = () => {
   return (
     <Styled.Hero>
       <Styled.Image />
@@ -18,4 +18,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Hero;

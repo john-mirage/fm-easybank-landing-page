@@ -1,10 +1,9 @@
 import {
   bodyMixin,
   containerMixin,
-  titleMixin,
+  headingMixin,
 } from "@styles/styled-components.mixins";
 import styled, { css } from "styled-components";
-import BaseFeature from "@components/Feature";
 import {
   IconOnline,
   IconBudgeting,
@@ -30,7 +29,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  ${titleMixin}
+  ${headingMixin}
   margin-bottom: ${({ theme }) => theme.pxToRem(14)};
 `;
 
@@ -41,7 +40,7 @@ export const Subtitle = styled.p`
 
 export const List = styled.ul``;
 
-export const Feature = styled(BaseFeature)`
+export const ListItem = styled.li`
   margin-bottom: ${({ theme }) => theme.pxToRem(32)};
 
   &:last-child {

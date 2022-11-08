@@ -1,3 +1,4 @@
+import ArticleList from "@components/ArticleList";
 import FeatureList from "@components/FeatureList";
 import Header from "@components/Header";
 import Hero from "@components/Hero";
@@ -15,6 +16,7 @@ const App = () => {
           <Header />
           <Hero />
           <FeatureList />
+          <ArticleList />
         </Styled.Container>
       </ThemeProvider>
     </>
