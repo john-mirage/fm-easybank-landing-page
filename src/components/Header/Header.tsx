@@ -3,11 +3,12 @@ import * as Styled from "./Header.style";
 const Header = () => {
   return (
     <Styled.Header>
+      <Styled.Title>Easybank homepage</Styled.Title>
       <Styled.Container>
         <Styled.Logo />
-        <Styled.Button>
+        <Styled.IconButton type="button" label="open main navigation">
           <Styled.Icon />
-        </Styled.Button>
+        </Styled.IconButton>
       </Styled.Container>
     </Styled.Header>
   );

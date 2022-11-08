@@ -3,11 +3,17 @@ import * as Styled from "./IconButton.style";
 
 interface Props {
   className?: string;
+  type: "button" | "submit" | "reset";
+  label: string;
   children: ReactNode;
 }
 
-const IconButton = ({ className, children }: Props) => {
-  return <Styled.Button className={className}>{children}</Styled.Button>;
+const IconButton = ({ className, type, label, children }: Props) => {
+  return (
+    <Styled.Button className={className} type={type} aria-label={label}>
+      {children}
+    </Styled.Button>
+  );
 };
 
 export default IconButton;

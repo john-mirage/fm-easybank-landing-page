@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { bodyMixin, containerMixin } from "@styles/styled-components.mixins";
 
-export const Hero = styled.div``;
+export const Hero = styled.section``;
 
 export const Image = styled.div`
   height: ${({ theme }) => theme.pxToRem(282)};

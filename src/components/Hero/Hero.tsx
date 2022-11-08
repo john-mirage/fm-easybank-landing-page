@@ -12,7 +12,7 @@ const App = () => {
           one-stop-shop for spending, saving, budgeting, investing, and much
           more.
         </Styled.Subtitle>
-        <Button>Request Invite</Button>
+        <Button type="button">Request Invite</Button>
       </Styled.Container>
     </Styled.Hero>
   );

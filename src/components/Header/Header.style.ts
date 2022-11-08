@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import IconButton from "@components/IconButton";
+import BaseIconButton from "@components/IconButton";
 import { Logo as BaseLogo } from "@components/Icon";
-import { containerMixin } from "@styles/styled-components.mixins";
+import {
+  containerMixin,
+  screenReaderOnlyMixin,
+} from "@styles/styled-components.mixins";
 import { IconHamburger } from "@components/Icon";
 
 export const Header = styled.header`
@@ -12,6 +15,10 @@ export const Header = styled.header`
   height: ${({ theme }) => theme.pxToRem(64)};
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+`;
+
+export const Title = styled.h1`
+  ${screenReaderOnlyMixin}
 `;
 
 export const Container = styled.div`
@@ -28,7 +35,7 @@ export const Logo = styled(BaseLogo)`
   height: ${({ theme }) => theme.pxToRem(20)};
 `;
 
-export const Button = styled(IconButton)`
+export const IconButton = styled(BaseIconButton)`
   margin-right: ${({ theme }) => theme.pxToRem(-12)};
 `;
 
