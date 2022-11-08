@@ -1,6 +1,8 @@
 namespace AppData {
+  import { ReactNode } from "react";
+
   interface Feature {
-    icon: string;
+    Icon: ReactNode;
     name: string;
     description: string;
   }

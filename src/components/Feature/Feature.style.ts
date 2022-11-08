@@ -9,10 +9,6 @@ export const Article = styled.article`
   align-items: center;
 `;
 
-export const Icon = styled.div`
-  margin-bottom: ${({ theme }) => theme.pxToRem(24)};
-`;
-
 export const Name = styled.h3`
   margin-bottom: ${({ theme }) => theme.pxToRem(16)};
   font-size: ${({ theme }) => theme.pxToRem(20)};
