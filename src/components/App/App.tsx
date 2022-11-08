@@ -1,5 +1,6 @@
 import ArticleList from "@components/ArticleList";
 import FeatureList from "@components/FeatureList";
+import Footer from "@components/Footer";
 import Header from "@components/Header";
 import Hero from "@components/Hero";
 import GlobalStyle from "@styles/styled-components.global";
@@ -17,6 +18,7 @@ const App = () => {
           <Hero />
           <FeatureList />
           <ArticleList />
+          <Footer />
         </Styled.Container>
       </ThemeProvider>
     </>

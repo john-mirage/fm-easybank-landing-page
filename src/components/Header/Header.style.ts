@@ -33,6 +33,7 @@ export const Container = styled.div`
 export const Logo = styled(BaseLogo)`
   width: ${({ theme }) => theme.pxToRem(139)};
   height: ${({ theme }) => theme.pxToRem(20)};
+  color: ${({ theme }) => theme.color.darkBlue};
 `;
 
 export const IconButton = styled(BaseIconButton)`
