@@ -7,6 +7,13 @@ export const Article = styled.article`
   overflow: hidden;
 `;
 
+export const Image = styled.img`
+  width: 100%;
+  aspect-ratio: 79 / 50;
+  object-fit: cover;
+  object-position: center;
+`;
+
 export const Body = styled.div`
   padding: ${({ theme }) => `${theme.pxToRem(24)} ${theme.pxToRem(32)}`};
   text-align: left;

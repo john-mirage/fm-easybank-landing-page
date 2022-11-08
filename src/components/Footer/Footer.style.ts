@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Logo as BaseLogo } from "@components/Icon";
 import BaseButton from "@components/Button";
 import BaseSocialNavigation from "@components/SocialNavigation";
+import FooterNavigation from "@components/FooterNavigation";
 
 export const Footer = styled.footer`
   padding-top: ${({ theme }) => theme.pxToRem(40)};
@@ -25,6 +26,10 @@ export const Logo = styled(BaseLogo)`
 `;
 
 export const SocialNavigation = styled(BaseSocialNavigation)`
+  margin-bottom: ${({ theme }) => theme.pxToRem(32)};
+`;
+
+export const Navigation = styled(FooterNavigation)`
   margin-bottom: ${({ theme }) => theme.pxToRem(32)};
 `;
 

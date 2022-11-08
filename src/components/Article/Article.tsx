@@ -7,6 +7,7 @@ interface Props {
 const Article = ({ article }: Props) => {
   return (
     <Styled.Article>
+      <Styled.Image src={article.image} alt="" />
       <Styled.Body>
         <Styled.Author>{article.author}</Styled.Author>
         <Styled.Name>{article.name}</Styled.Name>

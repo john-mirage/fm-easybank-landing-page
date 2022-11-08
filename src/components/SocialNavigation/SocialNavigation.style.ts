@@ -15,6 +15,7 @@ const iconMixin = css`
 export const List = styled.ul`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin: ${({ theme }) => theme.pxToRem(-8)};

@@ -15,9 +15,11 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Styled.Container>
           <Header />
-          <Hero />
-          <FeatureList />
-          <ArticleList />
+          <main>
+            <Hero />
+            <FeatureList />
+            <ArticleList />
+          </main>
           <Footer />
         </Styled.Container>
       </ThemeProvider>
