@@ -42,9 +42,9 @@ const ArticleList = () => {
       <Styled.Title>Latest Articles</Styled.Title>
       <Styled.List>
         {articles.map((article) => (
-          <Styled.ListItem key={article.name}>
+          <li key={article.name}>
             <Article article={article} />
-          </Styled.ListItem>
+          </li>
         ))}
       </Styled.List>
     </Styled.ArticleList>

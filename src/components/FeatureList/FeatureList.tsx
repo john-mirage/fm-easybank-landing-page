@@ -39,9 +39,9 @@ const FeatureList = () => {
         </Styled.Subtitle>
         <Styled.List>
           {features.map((feature) => (
-            <Styled.ListItem key={feature.name}>
+            <li key={feature.name}>
               <Feature feature={feature} />
-            </Styled.ListItem>
+            </li>
           ))}
         </Styled.List>
       </Styled.Container>

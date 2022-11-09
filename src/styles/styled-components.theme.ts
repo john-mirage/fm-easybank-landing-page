@@ -36,8 +36,7 @@ const theme = {
     xs: "375px",
     sm: "576px",
     md: "768px",
-    lg: "992px",
-    xl: "1200px",
+    lg: "1206px",
   },
   pxToRem: (px: number) => `${String(px / FONT_ROOT)}rem`,
 };

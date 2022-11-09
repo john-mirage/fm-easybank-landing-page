@@ -29,10 +29,24 @@ export const containerMixin = css`
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
     max-width: ${({ theme }) => theme.screen.lg};
+    padding-left: ${({ theme }) => theme.pxToRem(48)};
+    padding-right: ${({ theme }) => theme.pxToRem(48)};
+  }
+`;
+
+export const gridMixin = css`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: ${({ theme }) => theme.pxToRem(32)};
+  width: 100%;
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.sm}) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: ${({ theme }) => theme.pxToRem(30)};
   }
 
-  @media screen and (min-width: ${({ theme }) => theme.screen.xl}) {
-    max-width: ${({ theme }) => theme.screen.xl};
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
 
@@ -42,6 +56,12 @@ export const headingMixin = css`
   line-height: ${({ theme }) => theme.pxToRem(38)};
   letter-spacing: ${({ theme }) => theme.pxToRem(-0.57)};
   color: ${({ theme }) => theme.color.darkBlue};
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    font-size: ${({ theme }) => theme.pxToRem(40)};
+    line-height: ${({ theme }) => theme.pxToRem(68)};
+    letter-spacing: ${({ theme }) => theme.pxToRem(-0.71)};
+  }
 `;
 
 export const bodyMixin = css`
@@ -49,5 +69,4 @@ export const bodyMixin = css`
   font-weight: 400;
   line-height: ${({ theme }) => theme.pxToRem(25)};
   letter-spacing: ${({ theme }) => theme.pxToRem(-0.23)};
-  color: ${({ theme }) => theme.color.grayishBlue};
 `;

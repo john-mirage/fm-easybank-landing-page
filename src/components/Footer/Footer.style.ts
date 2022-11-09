@@ -39,4 +39,5 @@ export const Button = styled(BaseButton)`
 
 export const Copyright = styled.p`
   ${bodyMixin}
+  color: ${({ theme }) => theme.color.grayishBlue};
 `;

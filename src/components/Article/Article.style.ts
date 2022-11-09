@@ -17,6 +17,10 @@ export const Image = styled.img`
 export const Body = styled.div`
   padding: ${({ theme }) => `${theme.pxToRem(24)} ${theme.pxToRem(32)}`};
   text-align: left;
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    padding: ${({ theme }) => theme.pxToRem(24)};
+  }
 `;
 
 export const Author = styled.p`
