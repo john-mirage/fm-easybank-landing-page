@@ -13,7 +13,6 @@ import {
 } from "@components/Icon";
 
 const iconMixin = css`
-  margin-bottom: ${({ theme }) => theme.pxToRem(24)};
   width: ${({ theme }) => theme.pxToRem(72)};
   height: ${({ theme }) => theme.pxToRem(72)};
 `;
@@ -22,6 +21,11 @@ export const FeatureList = styled.section`
   padding-top: ${({ theme }) => theme.pxToRem(64)};
   padding-bottom: ${({ theme }) => theme.pxToRem(64)};
   background-color: ${({ theme }) => theme.color.lightGrayishBlue};
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    padding-top: ${({ theme }) => theme.pxToRem(96)};
+    padding-bottom: ${({ theme }) => theme.pxToRem(94)};
+  }
 `;
 
 export const Container = styled.div`
@@ -40,14 +44,20 @@ export const Container = styled.div`
 export const Title = styled.h2`
   ${headingMixin}
   margin-bottom: ${({ theme }) => theme.pxToRem(14)};
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    margin-bottom: ${({ theme }) => theme.pxToRem(16)};
+  }
 `;
 
 export const Subtitle = styled.p`
   ${bodyMixin}
   margin-bottom: ${({ theme }) => theme.pxToRem(56)};
+  max-width: ${({ theme }) => theme.pxToRem(360)};
   color: ${({ theme }) => theme.color.grayishBlue};
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    margin-bottom: ${({ theme }) => theme.pxToRem(72)};
     max-width: ${({ theme }) => theme.pxToRem(635)};
     font-size: ${({ theme }) => theme.pxToRem(18)};
     line-height: ${({ theme }) => theme.pxToRem(28)};

@@ -19,7 +19,7 @@ const FooterNavigation = ({ className }: Props) => {
       <Styled.List>
         {links.map((link) => (
           <Styled.ListItem key={link}>
-            <Styled.Link>{link}</Styled.Link>
+            <Styled.Link href="#">{link}</Styled.Link>
           </Styled.ListItem>
         ))}
       </Styled.List>

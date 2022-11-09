@@ -16,6 +16,8 @@ export const ArticleList = styled.section`
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
     align-items: flex-start;
+    padding-top: ${({ theme }) => theme.pxToRem(80)};
+    padding-bottom: ${({ theme }) => theme.pxToRem(80)};
     text-align: left;
   }
 `;
@@ -23,6 +25,10 @@ export const ArticleList = styled.section`
 export const Title = styled.h2`
   margin-bottom: ${({ theme }) => theme.pxToRem(32)};
   ${headingMixin}
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    margin-bottom: ${({ theme }) => theme.pxToRem(40)};
+  }
 `;
 
 export const List = styled.ul`

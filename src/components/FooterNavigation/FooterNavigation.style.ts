@@ -1,20 +1,28 @@
 import { bodyMixin } from "@styles/styled-components.mixins";
 import styled from "styled-components";
 
-export const Navigation = styled.nav``;
+export const Navigation = styled.nav`
+  text-align: center;
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    text-align: left;
+  }
+`;
 
 export const List = styled.ul`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
+  gap: ${({ theme }) => theme.pxToRem(8)};
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: ${({ theme }) => `${theme.pxToRem(8)}  ${theme.pxToRem(30)}`};
+  }
 `;
 
 export const ListItem = styled.li`
-  margin-bottom: ${({ theme }) => theme.pxToRem(8)};
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  width: ${({ theme }) => theme.pxToRem(160)};
 `;
 
 export const Link = styled.a`

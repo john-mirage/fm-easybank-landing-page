@@ -37,6 +37,7 @@ export const Title = styled.h2`
   color: ${({ theme }) => theme.color.darkBlue};
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    margin-bottom: ${({ theme }) => theme.pxToRem(24)};
     font-size: ${({ theme }) => theme.pxToRem(56)};
     line-height: ${({ theme }) => theme.pxToRem(64)};
     letter-spacing: ${({ theme }) => theme.pxToRem(-1)};
@@ -50,6 +51,8 @@ export const Subtitle = styled.p`
   color: ${({ theme }) => theme.color.grayishBlue};
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    margin-bottom: ${({ theme }) => theme.pxToRem(36)};
+    max-width: ${({ theme }) => theme.pxToRem(448)};
     font-size: ${({ theme }) => theme.pxToRem(18)};
     line-height: ${({ theme }) => theme.pxToRem(28)};
     letter-spacing: ${({ theme }) => theme.pxToRem(-0.28)};
