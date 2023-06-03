@@ -1,13 +1,27 @@
 import styled from "styled-components";
 import { bodyMixin, containerMixin } from "@styles/styled-components.mixins";
+import mobilePattern from "@images/bg-intro-mobile.svg";
+import desktopPattern from "@images/bg-intro-desktop.svg";
 
-export const Hero = styled.section``;
+export const Hero = styled.section`
+  padding-bottom: ${({ theme }) => theme.pxToRem(88)};
+  background-image: url("${mobilePattern}");
+  background-repeat: no-repeat;
+  background-position: top -80px right;
+  background-size: contain;
 
-export const Image = styled.div`
-  height: ${({ theme }) => theme.pxToRem(282)};
+  @media screen and (min-width: ${({ theme }) => theme.screen.sm}) {
+    background-position: top -280px right;
+    background-size: 768px auto;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    background-position: top -480px right;
+    background-size: 992px auto;
+  }
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
-    display: none;
+    background-image: none;
   }
 `;
 
@@ -17,13 +31,43 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-bottom: ${({ theme }) => theme.pxToRem(88)};
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
-    align-items: flex-start;
+    flex-direction: row;
     text-align: left;
-    padding-top: ${({ theme }) => theme.pxToRem(170)};
-    padding-bottom: ${({ theme }) => theme.pxToRem(170)};
+  }
+`;
+
+export const Mockup = styled.img`
+  margin-top: -36%;
+  margin-bottom: ${({ theme }) => theme.pxToRem(40)};
+  width: 100%;
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    width: ${({ theme }) => theme.pxToRem(592)};
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    order: 2;
+    flex: 1;
+    margin-top: -500px;
+    margin-bottom: -200px;
+    margin-right: -500px;
+    padding-left: 140px;
+    padding-top: 400px;
+    padding-right: 300px;
+    background-image: url("${desktopPattern}");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom 48px right;
+  }
+`;
+
+export const TextSection = styled.div`
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    margin-top: 64px;
+    order: 1;
+    width: 447px;
   }
 `;
 
