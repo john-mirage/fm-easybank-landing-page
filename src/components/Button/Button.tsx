@@ -11,6 +11,7 @@ const Button = ({ className, type, children }: Props) => {
   return (
     <Styled.Button className={className} type={type}>
       {children}
+      <Styled.Overlay />
     </Styled.Button>
   );
 };
