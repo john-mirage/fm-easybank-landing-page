@@ -1,4 +1,3 @@
-import HeaderNavigation from "@components/HeaderNavigation";
 import * as Styled from "./Header.style";
 import { useState } from "react";
 
@@ -14,10 +13,15 @@ const Header = () => {
       <Styled.Title>Easybank homepage</Styled.Title>
       <Styled.Container>
         <Styled.LeftSection>
-          <Styled.Logo />
+          <a href="#" aria-label="Go to the homepage of Easybank">
+            <Styled.Logo />
+          </a>
         </Styled.LeftSection>
         <Styled.MiddleSection>
-          {navIsOpen && <HeaderNavigation />}
+          <Styled.HeaderNavigation
+            navIsOpen={navIsOpen}
+            onClick={onButtonClick}
+          />
         </Styled.MiddleSection>
         <Styled.RightSection>
           <Styled.IconButton

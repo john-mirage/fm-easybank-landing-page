@@ -4,7 +4,9 @@ const Footer = () => {
   return (
     <Styled.Footer>
       <Styled.Container>
-        <Styled.Logo />
+        <a href="#" aria-label="Go to the homepage of Easybank">
+          <Styled.Logo />
+        </a>
         <Styled.SocialNavigation />
         <Styled.Navigation />
         <Styled.Button type="button">Request Invite</Styled.Button>

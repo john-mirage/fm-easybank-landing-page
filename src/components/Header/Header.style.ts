@@ -7,6 +7,11 @@ import {
 } from "@styles/styled-components.mixins";
 import { IconHamburger } from "@components/Icon";
 import BaseButton from "@components/Button";
+import Navigation from "@components/HeaderNavigation";
+
+interface NavigationProps {
+  navIsOpen: boolean;
+}
 
 export const Header = styled.header`
   position: fixed;
@@ -55,6 +60,21 @@ export const MiddleSection = styled.div`
 export const RightSection = styled.div`
   ${Section}
   justify-content: flex-end;
+`;
+
+export const HeaderNavigation = styled(Navigation)<NavigationProps>`
+  visibility: ${({ navIsOpen }) => (navIsOpen ? "visible" : "hidden")};
+  opacity: ${({ navIsOpen }) => (navIsOpen ? "1" : "0")};
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition-property: visibility, opacity;
+    transition-duration: 150ms;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    visibility: visible;
+    opacity: 1;
+  }
 `;
 
 export const Logo = styled(BaseLogo)`

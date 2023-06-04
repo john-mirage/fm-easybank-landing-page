@@ -1,15 +1,35 @@
 import * as Styled from "./HeaderNavigation.style";
 
-const HeaderNavigation = () => {
+interface Props {
+  className?: string;
+  onClick: () => void;
+}
+
+const HeaderNavigation = ({ className, onClick }: Props) => {
   return (
-    <Styled.Container>
-      <Styled.Overlay />
+    <Styled.Container className={className}>
+      <Styled.Overlay onClick={onClick} />
       <Styled.Navigation>
-        <Styled.Link href="">Home</Styled.Link>
-        <Styled.Link href="">Contact</Styled.Link>
-        <Styled.Link href="">About</Styled.Link>
-        <Styled.Link href="">Blog</Styled.Link>
-        <Styled.Link href="">Careers</Styled.Link>
+        <Styled.Link href="#">
+          Home
+          <Styled.LinkLine />
+        </Styled.Link>
+        <Styled.Link href="#">
+          Contact
+          <Styled.LinkLine />
+        </Styled.Link>
+        <Styled.Link href="#">
+          About
+          <Styled.LinkLine />
+        </Styled.Link>
+        <Styled.Link href="#">
+          Blog
+          <Styled.LinkLine />
+        </Styled.Link>
+        <Styled.Link href="#">
+          Careers
+          <Styled.LinkLine />
+        </Styled.Link>
       </Styled.Navigation>
     </Styled.Container>
   );
