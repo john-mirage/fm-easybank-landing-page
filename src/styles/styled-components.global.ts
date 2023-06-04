@@ -2,24 +2,6 @@ import { createGlobalStyle, css } from "styled-components";
 import theme from "@styles/styled-components.theme";
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Public Sans';
-    src: url("/src/fonts/PublicSans-Light.ttf") format("truetype");
-    font-weight: 300;
-  }
-
-  @font-face {
-    font-family: 'Public Sans';
-    src: url("/src/fonts/PublicSans-Regular.ttf") format("truetype");
-    font-weight: 400;
-  }
-
-  @font-face {
-    font-family: 'Public Sans';
-    src: url("/src/fonts/PublicSans-Bold.ttf") format("truetype");
-    font-weight: 700;
-  }
-
   *,
   *::before,
   *::after {
