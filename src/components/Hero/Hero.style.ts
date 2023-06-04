@@ -22,7 +22,7 @@ export const Pattern = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme.screen.sm}) {
     aspect-ratio: auto;
-    height: 416px;
+    height: ${({ theme }) => theme.pxToRem(416)};
     background-image: url("${desktopPattern}");
     background-position: center;
     background-size: contain;
@@ -31,8 +31,8 @@ export const Pattern = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
     left: 50%;
-    width: 1371px;
-    height: 956px;
+    width: ${({ theme }) => theme.pxToRem(1371)};
+    height: ${({ theme }) => theme.pxToRem(956)};
     transform: translate(-12%, -24%);
   }
 `;
@@ -46,14 +46,14 @@ export const Mockup = styled.img`
   @media screen and (min-width: ${({ theme }) => theme.screen.sm}) {
     margin-left: auto;
     margin-right: auto;
-    max-width: 512px;
+    max-width: ${({ theme }) => theme.pxToRem(512)};
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
     position: absolute;
     top: 0;
     left: 50%;
-    max-width: 732px;
+    max-width: ${({ theme }) => theme.pxToRem(732)};
     transform: translate(14%, -12%);
   }
 `;
@@ -81,11 +81,7 @@ export const TextSection = styled.div`
   align-items: center;
 
   @media screen and (min-width: ${({ theme }) => theme.screen.sm}) {
-    margin-top: -36%;
-  }
-
-  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
-    margin-top: -26%;
+    margin-top: ${({ theme }) => theme.pxToRem(-180)};
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {

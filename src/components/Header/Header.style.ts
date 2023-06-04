@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import BaseIconButton from "@components/IconButton";
-import { Logo as BaseLogo } from "@components/Icon";
+import { Logo as BaseLogo, IconClose } from "@components/Icon";
 import {
   containerMixin,
   screenReaderOnlyMixin,
@@ -71,7 +71,12 @@ export const IconButton = styled(BaseIconButton)`
   }
 `;
 
-export const Icon = styled(IconHamburger)`
+export const HamburgerIcon = styled(IconHamburger)`
+  width: ${({ theme }) => theme.pxToRem(24)};
+  height: ${({ theme }) => theme.pxToRem(24)};
+`;
+
+export const CloseIcon = styled(IconClose)`
   width: ${({ theme }) => theme.pxToRem(24)};
   height: ${({ theme }) => theme.pxToRem(24)};
 `;

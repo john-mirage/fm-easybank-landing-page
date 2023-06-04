@@ -33,9 +33,9 @@ const SocialNavigation = ({ className }: Props) => {
       <Styled.List>
         {socialMedias.map((socialMedia) => (
           <Styled.ListItem key={socialMedia.name}>
-            <a href="#" aria-label={`${socialMedia.name} page`}>
+            <Styled.Link href="#" aria-label={`${socialMedia.name} page`}>
               {socialMedia.Icon}
-            </a>
+            </Styled.Link>
           </Styled.ListItem>
         ))}
       </Styled.List>

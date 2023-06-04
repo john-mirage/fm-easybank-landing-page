@@ -32,13 +32,25 @@ export const Author = styled.p`
   color: ${({ theme }) => theme.color.grayishBlue};
 `;
 
-export const Name = styled.h3`
+export const Name = styled.a`
+  display: block;
   margin-bottom: ${({ theme }) => theme.pxToRem(8)};
   font-size: ${({ theme }) => theme.pxToRem(16)};
   font-weight: 300;
   line-height: ${({ theme }) => theme.pxToRem(20)};
   letter-spacing: ${({ theme }) => theme.pxToRem(-0.29)};
   color: ${({ theme }) => theme.color.darkBlue};
+
+  @media screen and (hover: hover) {
+    &:hover {
+      color: ${({ theme }) => theme.color.limeGreen};
+    }
+  }
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition-property: color;
+    transition-duration: 150ms;
+  }
 `;
 
 export const Excerpt = styled.p`

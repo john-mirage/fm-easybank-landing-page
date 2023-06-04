@@ -38,6 +38,21 @@ export const ListItem = styled.li`
   }
 `;
 
+export const Link = styled.a`
+  color: ${({ theme }) => theme.color.white};
+
+  @media screen and (hover: hover) {
+    &:hover {
+      color: ${({ theme }) => theme.color.limeGreen};
+    }
+  }
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition-property: color;
+    transition-duration: 150ms;
+  }
+`;
+
 export const FacebookIcon = styled(IconFacebook)`
   ${iconMixin}
 `;

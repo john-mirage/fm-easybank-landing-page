@@ -29,6 +29,17 @@ export const Link = styled.a`
   ${bodyMixin}
   color: ${({ theme }) => theme.color.white};
 
+  @media screen and (hover: hover) {
+    &:hover {
+      color: ${({ theme }) => theme.color.limeGreen};
+    }
+  }
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition-property: color;
+    transition-duration: 150ms;
+  }
+
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
     font-size: ${({ theme }) => theme.pxToRem(16)};
     line-height: ${({ theme }) => theme.pxToRem(26)};

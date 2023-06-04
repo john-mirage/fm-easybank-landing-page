@@ -10,7 +10,7 @@ const Article = ({ article }: Props) => {
       <Styled.Image src={article.image} alt="" draggable="false" />
       <Styled.Body>
         <Styled.Author>{article.author}</Styled.Author>
-        <Styled.Name>{article.name}</Styled.Name>
+        <Styled.Name href="#">{article.name}</Styled.Name>
         <Styled.Excerpt>{article.excerpt}</Styled.Excerpt>
       </Styled.Body>
     </Styled.Article>
