@@ -5,8 +5,9 @@ import mockup from "@images/image-mockups.png";
 const Hero = () => {
   return (
     <Styled.Hero>
+      <Styled.Pattern />
+      <Styled.Mockup src={mockup} alt="" draggable="false" />
       <Styled.Container>
-        <Styled.Mockup src={mockup} alt="" draggable="false" />
         <Styled.TextSection>
           <Styled.Title>Next generation digital banking</Styled.Title>
           <Styled.Subtitle>

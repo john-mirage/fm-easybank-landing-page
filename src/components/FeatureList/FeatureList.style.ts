@@ -18,6 +18,8 @@ const iconMixin = css`
 `;
 
 export const FeatureList = styled.section`
+  position: relative;
+  z-index: 80;
   padding-top: ${({ theme }) => theme.pxToRem(64)};
   padding-bottom: ${({ theme }) => theme.pxToRem(64)};
   background-color: ${({ theme }) => theme.color.lightGrayishBlue};

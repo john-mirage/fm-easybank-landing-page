@@ -4,24 +4,57 @@ import mobilePattern from "@images/bg-intro-mobile.svg";
 import desktopPattern from "@images/bg-intro-desktop.svg";
 
 export const Hero = styled.section`
-  padding-bottom: ${({ theme }) => theme.pxToRem(88)};
+  position: relative;
+`;
+
+export const Pattern = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  aspect-ratio: 732/901;
+  width: 100%;
   background-image: url("${mobilePattern}");
   background-repeat: no-repeat;
-  background-position: top -80px right;
-  background-size: contain;
+  background-position: bottom right;
+  background-size: cover;
+  transform: translateY(-16%);
 
   @media screen and (min-width: ${({ theme }) => theme.screen.sm}) {
-    background-position: top -280px right;
-    background-size: 768px auto;
-  }
-
-  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
-    background-position: top -480px right;
-    background-size: 992px auto;
+    aspect-ratio: auto;
+    height: 416px;
+    background-image: url("${desktopPattern}");
+    background-position: center;
+    background-size: contain;
+    transform: none;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
-    background-image: none;
+    left: 50%;
+    width: 1371px;
+    height: 956px;
+    transform: translate(-12%, -24%);
+  }
+`;
+
+export const Mockup = styled.img`
+  position: relative;
+  z-index: 90;
+  width: 100%;
+  transform: translateY(-30%);
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.sm}) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 512px;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    max-width: 732px;
+    transform: translate(14%, -12%);
   }
 `;
 
@@ -31,43 +64,33 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-bottom: ${({ theme }) => theme.pxToRem(88)};
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
-    flex-direction: row;
+    align-items: flex-start;
+    padding-top: ${({ theme }) => theme.pxToRem(170)};
+    padding-bottom: ${({ theme }) => theme.pxToRem(170)};
     text-align: left;
   }
 `;
 
-export const Mockup = styled.img`
-  margin-top: -36%;
-  margin-bottom: ${({ theme }) => theme.pxToRem(40)};
-  width: 100%;
+export const TextSection = styled.div`
+  margin-top: -40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.sm}) {
+    margin-top: -36%;
+  }
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
-    width: ${({ theme }) => theme.pxToRem(592)};
+    margin-top: -26%;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
-    order: 2;
-    flex: 1;
-    margin-top: -500px;
-    margin-bottom: -200px;
-    margin-right: -500px;
-    padding-left: 140px;
-    padding-top: 400px;
-    padding-right: 300px;
-    background-image: url("${desktopPattern}");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom 48px right;
-  }
-`;
-
-export const TextSection = styled.div`
-  @media screen and (min-width: ${({ theme }) => theme.screen.lg}) {
-    margin-top: 64px;
-    order: 1;
-    width: 447px;
+    margin-top: 0;
+    align-items: flex-start;
   }
 `;
 

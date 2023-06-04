@@ -13,8 +13,8 @@ const App = () => {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <Header />
         <Styled.Container>
-          <Header />
           <main>
             <Hero />
             <FeatureList />
